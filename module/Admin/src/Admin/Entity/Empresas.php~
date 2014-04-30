@@ -1,0 +1,84 @@
+<?php
+
+namespace Admin\Entity;
+
+use Core\Entity\AbstractEntity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Empresas
+ *
+ * @ORM\Table(name="empresas")
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ * @ORM\Entity(repositoryClass="Admin\Entity\EmpresasRepository")
+ */
+class Empresas extends AbstractEntity
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cod_for", type="integer", nullable=true)
+     */
+    private $codFor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="razao", type="string", length=45, nullable=true)
+     */
+    private $razao;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="endereco", type="string", length=45, nullable=true)
+     */
+    private $endereco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cidade", type="string", length=45, nullable=true)
+     */
+    private $cidade;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=2, nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cnpj", type="string", length=20, nullable=true)
+     */
+    private $cnpj;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="inc_est", type="string", length=15, nullable=true)
+     */
+    private $incEst;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefone", type="string", length=15, nullable=true)
+     */
+    private $telefone;
+
+
+}

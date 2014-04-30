@@ -1,0 +1,277 @@
+<?php
+
+namespace Admin\Entity;
+
+use Core\Entity\AbstractEntity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * RedesSociais
+ *
+ * @ORM\Table(name="redes_sociais")
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Admin\Entity\RedesSociaisRepository")
+ */
+class RedesSociais extends AbstractEntity
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="facebook", type="string", length=100, nullable=true)
+     */
+    private $facebook;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer", nullable=true)
+     */
+    private $status = '1';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=true)
+     */
+    private $tipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="twitter", type="string", length=100, nullable=true)
+     */
+    private $twitter;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="msn", type="string", length=100, nullable=true)
+     */
+    private $msn;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="skype", type="string", length=100, nullable=true)
+     */
+    private $skype;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="google", type="string", length=100, nullable=true)
+     */
+    private $google;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="flickr", type="string", length=100, nullable=true)
+     */
+    private $flickr;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     * @return RedesSociais
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string 
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     * @return RedesSociais
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer 
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set tipo
+     *
+     * @param integer $tipo
+     * @return RedesSociais
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+
+        return $this;
+    }
+
+    /**
+     * Get tipo
+     *
+     * @return integer 
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * Set twitter
+     *
+     * @param string $twitter
+     * @return RedesSociais
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string 
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set msn
+     *
+     * @param string $msn
+     * @return RedesSociais
+     */
+    public function setMsn($msn)
+    {
+        $this->msn = $msn;
+
+        return $this;
+    }
+
+    /**
+     * Get msn
+     *
+     * @return string 
+     */
+    public function getMsn()
+    {
+        return $this->msn;
+    }
+
+    /**
+     * Set skype
+     *
+     * @param string $skype
+     * @return RedesSociais
+     */
+    public function setSkype($skype)
+    {
+        $this->skype = $skype;
+
+        return $this;
+    }
+
+    /**
+     * Get skype
+     *
+     * @return string 
+     */
+    public function getSkype()
+    {
+        return $this->skype;
+    }
+
+    /**
+     * Set google
+     *
+     * @param string $google
+     * @return RedesSociais
+     */
+    public function setGoogle($google)
+    {
+        $this->google = $google;
+
+        return $this;
+    }
+
+    /**
+     * Get google
+     *
+     * @return string 
+     */
+    public function getGoogle()
+    {
+        return $this->google;
+    }
+
+    /**
+     * Set flickr
+     *
+     * @param string $flickr
+     * @return RedesSociais
+     */
+    public function setFlickr($flickr)
+    {
+        $this->flickr = $flickr;
+
+        return $this;
+    }
+
+    /**
+     * Get flickr
+     *
+     * @return string 
+     */
+    public function getFlickr()
+    {
+        return $this->flickr;
+    }
+}
